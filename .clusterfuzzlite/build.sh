@@ -1,9 +1,8 @@
 #!/bin/bash -eu
 
-compile_python_fuzzer target_fuzzer.py
+# 1. Install atheris into the build image environment
+pip3 install atheris
 
-mkdir -p $OUT/target_fuzzer_corpus
-
-if [ -d "fuzz/corpus" ]; then
-    cp fuzz/corpus/* $OUT/target_fuzzer_corpus/ 2>/dev/null || true
-fi
+# 2. Compile the harness using the official wrapper tool
+# We pass --paths=. so PyInstaller can find your 'src' directory from the root
+compile_python_fuzzer fuzz/target_fuzzer.py --paths=.
