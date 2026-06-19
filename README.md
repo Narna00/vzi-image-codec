@@ -16,7 +16,7 @@ A lightweight, high-performance Python decoder engine designed for the Vectorize
 To set up the development environment locally, clone the repository and ensure you have Python 3.8+ installed:
 
 ```bash
-git clone [https://github.com/your-username/vzi-image-codec.git](https://github.com/your-username/vzi-image-codec.git)
+git clone [https://github.com/Narna00/vzi-image-codec.git](https://github.com/Narna00/vzi-image-codec.git)
 cd vzi-image-codec
 Usage
 You can process raw VZI bitstreams passing standard Python bytes objects directly into the core decoder module.
