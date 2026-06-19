@@ -1,7 +1,6 @@
 #!/bin/bash -eu
+# Install the package (builds the C extension)
+pip install .
 
-# 1. Install atheris into the build image environment
-pip3 install atheris
-
-# 2. Compile the harness using the official wrapper tool
-compile_python_fuzzer fuzz/target_fuzzer.py --paths=.
+# Compile the fuzzer into a self-contained binary
+compile_python_fuzzer fuzz/fuzzer.py
