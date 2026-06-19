@@ -1,16 +1,13 @@
 import atheris
 import sys
 
-with atheris.instrument_imports():
-    from src.decoder import parse_vzi
+from src import decoder
 
+@atheris.instrument_func
 def TestOneInput(data):
     try:
-        parse_vzi(data)
+        decoder.decode_image(data)
     except Exception:
-        # Catch standard Python exceptions to keep the fuzzer running.
-        # Native segmentation faults from memory corruption will bypass 
-        # this block and cleanly register as a target crash.
         pass
 
 def main():
