@@ -1,0 +1,2 @@
+with open('poc.bin', 'wb') as f:
+    f.write(b'A' * 65)
