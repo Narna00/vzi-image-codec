@@ -1,6 +1,0 @@
-with open('fuzz/corpus/valid1', 'wb') as f:
-    f.write(bytes.fromhex('010141'))
-with open('fuzz/corpus/valid2', 'wb') as f:
-    f.write(bytes.fromhex('01024142'))
-with open('fuzz/corpus/empty', 'wb') as f:
-    pass
